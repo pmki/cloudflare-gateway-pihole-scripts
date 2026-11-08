@@ -2,8 +2,8 @@ name: Update Filter Lists
 
 on:
   schedule:
-    - cron: "0 20 * * 1"
-    # Monday 3:00 AM (GMT+7)
+    - cron: "0 17 */3 * *"
+    # 3:00 AM (GMT+7) cron: "0 20 */3 * *"
   push:
     branches:
       - main

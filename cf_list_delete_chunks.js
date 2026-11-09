@@ -19,7 +19,7 @@ async function cloudflareAPI(endpoint, method = "GET", body = null) {
   };
   if (body) options.body = JSON.stringify(body);
 
-  const response = await fetch(`https://cloudflare.com{CF_ACCOUNT_ID}${endpoint}`, options);
+  const response = await fetch(`https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}${endpoint}`, options);
   return await response.json();
 }
 
